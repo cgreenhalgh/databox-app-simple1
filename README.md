@@ -1,2 +1,3 @@
-# databox-hello-world-node
-A template Databox app in Node.js
+# databox-app-simple1
+
+A simple Databox app in Node.js

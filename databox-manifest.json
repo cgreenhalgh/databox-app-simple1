@@ -1,33 +1,32 @@
 {
 	"manifest-version": 1,
 
-	"name": "uk.ac.nott.cs.pszcmg.app1",
+	"name": "databox-app-simple1",
 	"databox-type": "app",
 	"version": "0.1.0",
 
-	"description": "A template Databox app in Node.js",
-	"author": "Yousef Amar <yousef@amar.io> (http://yousefamar.com/)",
+	"description": "A simple Databox app in Node.js",
+	"author": "Chris Greenhalgh <chris.greenhalgh@nottingham.ac.uk>",
 	"license": "MIT",
 	"tags": [
-		"template",
 		"app",
 		"nodejs"
 	],
 
-	"homepage": "https://github.com/me-box/databox-app-template-node",
+	"homepage": "https://github.com/cgreenhalgh/databox-app-simple1",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/me-box/databox-app-template-node"
+		"url": "git+https://github.com/cgreenhalgh/databox-app-simple1"
 	},
 
 	"packages": [
 		{
-			"name": "Export Hack",
-			"purpose": "Temporary \"permissions\" for exporting",
+			"name": "Load average",
+			"purpose": "Display load average",
 			"install": "required",
-			"risks": "Leaking all your data.",
-			"benefits": "Demoing the export service.",
-			"datastores": [ "DS_export" ]
+			"risks": "None, really.",
+			"benefits": "See the average load :-)",
+			"datastores": [ "loadavg1" ]
 		}
 	],
 
@@ -35,21 +34,11 @@
 
 	"datasources": [
 		{
-			"type": "export",
+			"type": "loadavg1",
 			"required": true,
-			"name": "export",
-			"clientid": "DS_export",
+			"name": "loadavg1",
+			"clientid": "loadavg1",
 			"granularities": []
-		}
-	],
-
-	"export-whitelist": [
-		{
-			"url": "https://export.amar.io/",
-			"description": "Databox export destination request logger"
-		}, {
-			"url": "https://wtfismyip.com/json",
-			"description": "Your public IP, location, hostname, ISP, and Tor status"
 		}
 	],
 
